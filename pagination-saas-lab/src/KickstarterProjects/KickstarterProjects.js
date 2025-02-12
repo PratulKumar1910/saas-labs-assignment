@@ -53,7 +53,7 @@ export const KickstarterProjects = () => {
                     </div>
                 )
             })}
-            <div
+            <div className='button-row'
                 style={{
                     display: 'flex',
                     margin: '8px',

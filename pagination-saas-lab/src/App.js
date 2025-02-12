@@ -4,7 +4,11 @@ import { KickstarterProjects } from './KickstarterProjects/KickstarterProjects';
 function App() {
   return (
     <div className="App">
-      <KickstarterProjects/>
+      <div className='App-header'>
+        Task List
+        <KickstarterProjects/>
+      </div>
+      
     </div>
   );
 }

@@ -31,3 +31,9 @@
     text-align: start;
     padding: 8px;
 }
+
+.button-row {
+    display: 'flex';
+    margin: '8px';
+    justify-content: 'space-around';
+}
