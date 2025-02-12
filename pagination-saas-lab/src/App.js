@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="App">
       <div className='App-header'>
-        Task List
+        <div className='App-title'>
+          Task List
+        </div>
         <KickstarterProjects/>
       </div>
       
