@@ -31,12 +31,14 @@ export const KickstarterProjects = () => {
     )
 
     return (
+        <div className='table-wrapper'>
         <div className='task-table' >
             <div className='task-header'>
                 <div className='task-cell'>S. No</div>
                 <div className='task-cell'>Amount Pledged</div>
                 <div className='task-cell'>Percentage Funded</div>
             </div>
+            <div className='table-body'>
             {paginatedProjectsList.map((project, ind) => {
                 return (
                     <div
@@ -53,6 +55,7 @@ export const KickstarterProjects = () => {
                     </div>
                 )
             })}
+            </div>
             <div className='footer-container'>
                 <div className='footer-left'>
                 <button
@@ -76,19 +79,20 @@ export const KickstarterProjects = () => {
                 <button
                     className='.footer-btn'
                     onClick={() => setCurrentPage(currentPage+1)}
-                    disabled={currentPage===totalPages-1}
+                    disabled={currentPage===totalPages}
                 >
                     Next
                 </button>
                 <button
                     className='.footer-btn'
-                    onClick={() => setCurrentPage(totalPages-1)}
-                    disabled={currentPage===totalPages-1}
+                    onClick={() => setCurrentPage(totalPages)}
+                    disabled={currentPage===totalPages}
                 >
                     {">>"}
                 </button>
                 </div>
             </div>
+        </div>
         </div>
     ) 
 }

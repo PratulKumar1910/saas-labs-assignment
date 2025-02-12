@@ -1,5 +1,14 @@
-.task-table {
+.table-wrapper {
     width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 900px;
+}
+
+.task-table {
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -10,6 +19,13 @@
     color: white;
     font-weight: bold;
     border: 1px solid black;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 315px;
+    overflow: hidden;
 }
 
 .task-row {
