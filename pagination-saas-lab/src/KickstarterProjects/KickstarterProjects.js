@@ -53,14 +53,8 @@ export const KickstarterProjects = () => {
                     </div>
                 )
             })}
-            <div className='button-row'
-                style={{
-                    display: 'flex',
-                    margin: '8px',
-                    justifyContent: 'space-around'
-                }}
-            >
-                <div>
+            <div className='footer-container'>
+                <div className='footer-left'>
                 <button
                     onClick={() => setCurrentPage(1)}
                     disabled={currentPage===1}
@@ -68,28 +62,26 @@ export const KickstarterProjects = () => {
                     {"<<"}
                 </button>
                 <button
+                    className='.footer-btn'
                     onClick={() => setCurrentPage(currentPage-1)}
                     disabled={currentPage===1}
                 >
                     Prev
                 </button>
                 </div>
-                <div
-                    style={{
-                        border: '1px solid grey',
-                        padding: '6px 18px'
-                    }}
-                >
-                    {currentPage}
+                <div className='footer-center'>
+                    Page <span className="current-page">{currentPage}</span> of {totalPages}
                 </div>
-                <div>
+                <div className='footer-right'>
                 <button
+                    className='.footer-btn'
                     onClick={() => setCurrentPage(currentPage+1)}
                     disabled={currentPage===totalPages-1}
                 >
                     Next
                 </button>
                 <button
+                    className='.footer-btn'
                     onClick={() => setCurrentPage(totalPages-1)}
                     disabled={currentPage===totalPages-1}
                 >
